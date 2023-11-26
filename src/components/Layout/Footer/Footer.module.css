@@ -1,0 +1,139 @@
+.footer {
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 100px;
+
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo {
+    color: #5B5B5B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.informationBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.information {
+    width: 258.438px;
+    height: 13px;
+    border-radius: 50px;
+    background: #C8C8C8;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+    align-items: center;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+}
+
+.description {
+    width: 258.438px;
+    height: 13px;
+    border-radius: 50px;
+    background: #C8C8C8;
+}
+
+.linksBold {
+    border-radius: 50px;
+    background: #5B5B5B;
+    width: 258.438px;
+    height: 13px;
+}
+
+.links {
+    width: 258.438px;
+    height: 13px;
+    border-radius: 50px;
+    background: #C8C8C8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.wrapLinks {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.linksBlock {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.politics {
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 305px;
+    height: 13px;
+    border-radius: 50px;
+    background: #C8C8C8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.wrapper {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.politicsWrap {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+    align-items: center;
+}

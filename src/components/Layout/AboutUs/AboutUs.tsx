@@ -25,6 +25,9 @@ const AboutUs = () => {
 					<div className={styles.descriptionBold}></div>
 					<div className={styles.description}></div>
 					<div className={styles.description}></div>
+					<div className={styles.button}>
+						<img src="/Button.svg" alt="button"/>
+					</div>
 				</div>
 			</div>
 		</div>
