@@ -34,6 +34,12 @@ const SearchByCity = () => {
 				<City/>
 				<City/>
 				<City/>
+				<City/>
+				<City/>
+				<City/>
+				<City/>
+				<City/>
+				<City/>
 			</div>
 
 		</div>
