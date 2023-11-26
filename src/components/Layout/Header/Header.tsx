@@ -1,6 +1,30 @@
+import styles from './Header.module.css'
+
 const Header = () => {
-	return (
-		<h1>Header</h1>
+	return (<div className={styles.headerBlock}>
+			<div className={styles.header}>
+				<div className={styles.linksBlock}>
+					<h1>MARKETPLACE</h1>
+					<ul className={styles.links}>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>
+				</div>
+				<div className={styles.headerButtons}>
+					<button className={styles.loginButton}>Увійти</button>
+					<div className={styles.buttonBusiness}>
+						<img src="/Button.svg" alt="button"/>
+						<div className={styles.buttonText}>Для бізнесу</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
 	)
 }
 export default Header
