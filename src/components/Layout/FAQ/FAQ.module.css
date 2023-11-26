@@ -1,0 +1,31 @@
+.faqBlock {
+    width: 1245px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+
+.title {
+    width: 278.473px;
+    height: 30px;
+    border-radius: 50px;
+    background: #5B5B5B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.faqTitleContent {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.questionsBlock {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}

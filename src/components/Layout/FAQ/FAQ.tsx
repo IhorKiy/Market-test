@@ -1,13 +1,21 @@
 import Question from "./Question/Question.tsx";
+import styles from './FAQ.module.css'
 
-const FAQ = () => {
-	return (<div>
-		<h1>FAQ</h1>
-		<Question/>
-		<Question/>
-		<Question/>
-		<Question/>
+const Faq = () => {
+	return (<div className={styles.faqBlock}>
+			<div className={styles.title}>
+				<div className={styles.faqTitleContent}>FAQ</div>
+			</div>
+			<div className={styles.questionsBlock}>
+				<Question/>
+				<Question/>
+				<Question/>
+				<Question/>
+				<Question/>
+				<Question/>
+			</div>
+
 		</div>
 	)
 }
-export default FAQ
+export default Faq

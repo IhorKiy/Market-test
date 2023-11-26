@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     background: #E8E8E8;
-}
+    margin-bottom: 40px;
+    }
 .headerBlock {
     width: 100%;
 
@@ -22,6 +23,9 @@
     text-align: center;
     color: #E8E8E8;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcomeContainer {
@@ -97,6 +101,12 @@
     border-radius: 34px;
     background: #C8C8C8;
     margin-right: 30px;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .servicesInput {

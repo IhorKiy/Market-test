@@ -1,0 +1,41 @@
+.searchByCityBlock {
+    width: 1245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 90px;
+
+}
+.titleContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 640px;
+    height: 30px;
+    border-radius: 50px;
+    background: #5B5B5B;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+.cities {
+display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 300px;
+}

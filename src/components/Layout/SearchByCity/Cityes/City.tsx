@@ -1,6 +1,7 @@
+import styles from './City.module.css'
 const City = () => {
 	return (
-		<h2>City</h2>
+		<div className={styles.city}>Місто</div>
 	)
 }
 export default City

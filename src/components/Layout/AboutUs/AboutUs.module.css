@@ -1,0 +1,59 @@
+.aboutUsBlock {
+    width: 1245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+}
+
+.aboutUsImage {
+    width: 522px;
+    height: 560px;
+    border-radius: 12px;
+    background: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUsDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 522px;
+    height: 560px;
+    gap: 20px;
+
+}
+
+.description {
+    width: 325px;
+    height: 13px;
+    border-radius: 50px;
+    background: #C8C8C8;
+}
+
+.descriptionBold {
+    width: 500px;
+    height: 30px;
+    border-radius: 50px;
+    background: #5B5B5B;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}

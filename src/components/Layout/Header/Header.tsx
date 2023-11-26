@@ -4,7 +4,7 @@ const Header = () => {
 	return (<div className={styles.headerBlock}>
 			<div className={styles.header}>
 				<div className={styles.linksBlock}>
-					<h1>MARKETPLACE</h1>
+					<div className={styles.logo}>MARKETPLACE</div>
 					<ul className={styles.links}>
 						<li><a href="#">1</a></li>
 						<li><a href="#">2</a></li>

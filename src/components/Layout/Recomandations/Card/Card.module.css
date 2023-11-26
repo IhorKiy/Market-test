@@ -1,0 +1,50 @@
+.card   {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 10px;
+}
+.image {
+    width: 284px;
+    height: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px solid #E8E8E8;
+    margin-bottom: 10px;
+
+}
+.serviceName {
+    border-radius: 50px;
+    background: #cbc6c6;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+   padding-left: 20px;
+}
+.description {
+    border-radius: 50px;
+    background: #F1F1F1;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+}
+.rate {
+    border-radius: 50px;
+    background: #F1F1F1;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+}
