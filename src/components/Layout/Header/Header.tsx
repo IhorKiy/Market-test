@@ -1,4 +1,5 @@
 import styles from './Header.module.css'
+import {Link} from "react-router-dom";
 
 const Header = () => {
 	return (<div className={styles.headerBlock}>
@@ -13,7 +14,7 @@ const Header = () => {
 					</ul>
 				</div>
 				<div className={styles.headerButtons}>
-					<button className={styles.loginButton}>Увійти</button>
+					<Link to="/login"><button className={styles.loginButton}> Увійти</button></Link>
 					<div className={styles.buttonBusiness}>
 						<img src="/Button.svg" alt="button"/>
 						<div className={styles.buttonText}>Для бізнесу</div>
