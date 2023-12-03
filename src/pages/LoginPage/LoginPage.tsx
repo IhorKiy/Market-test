@@ -6,8 +6,9 @@ import {RegistrationForm} from "../RegistrationPage/RegistrationPageTypes.tsx";
 
 const LoginPage = () => {
 	const {register, reset, handleSubmit, formState: {errors, isValid}} = useForm<RegistrationForm>({mode: "onChange"})
-	const submit: SubmitHandler<RegistrationForm> = (data) => {
-		alert(JSON.stringify(data))
+	const submit: SubmitHandler<RegistrationForm> = () => {
+
+
 		reset()
 		window.location.href = '/'
 
@@ -37,7 +38,7 @@ const LoginPage = () => {
 					message: "Нерпавильні символи паролю"
 				}
 			})}/>
-			<div className={styles.formButton} ><button disabled={!isValid}>Увійти</button></div>
+			<div className={styles.formButton} ><button disabled={!isValid} >Увійти</button></div>
 
 		</form>
 			<div className={styles.links}>

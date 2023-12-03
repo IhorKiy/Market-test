@@ -6,8 +6,8 @@ import {RegistrationForm} from "./RegistrationPageTypes.tsx";
 
 const RegistrationPage = () => {
 	const {register, watch, reset, handleSubmit, formState: {errors, isValid}} = useForm<RegistrationForm>({mode: "onChange"})
-	const submit: SubmitHandler<RegistrationForm> = (data) => {
-		alert(JSON.stringify(data))
+	const submit: SubmitHandler<RegistrationForm> = () => {
+
 		reset()
 		window.location.href = '/success'
 
