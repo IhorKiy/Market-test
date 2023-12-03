@@ -1,25 +1,83 @@
 import styles from './RegistrationPage.module.css'
 import {Link} from "react-router-dom";
-import {FormEvent} from "react";
+import {SubmitHandler, useForm} from "react-hook-form";
+import {RegistrationForm} from "./RegistrationPageTypes.tsx";
+
 
 const RegistrationPage = () => {
-	const submit =(e:FormEvent) => {
-		e.preventDefault()
+	const {register, watch, reset, handleSubmit, formState: {errors, isValid}} = useForm<RegistrationForm>({mode: "onChange"})
+	const submit: SubmitHandler<RegistrationForm> = (data) => {
+		alert(JSON.stringify(data))
+		reset()
+		window.location.href = '/success'
+
 	}
+
 	return (<div className={styles.registrationForm}>
 			<h2>Реєстрація</h2>
-			<form className={styles.form} onSubmit={submit}>
+			<form className={styles.form} onSubmit={handleSubmit(submit)}>
 				<label htmlFor="name">Ім'я</label>
-				<input type="text" name='name' placeholder="введіть ім'я"/>
+				<div className={styles.error}>{errors?.name && <p>{errors?.name?.message}</p>}</div>
+				<input type="text" placeholder="введіть ім'я" {...register('name', {
+					required: "Обов'язкове для заповнення",
+					minLength: {
+						value: 3,
+						message: 'Мінімум три символи'
+					},
+					pattern: {
+						value: /^[а-яА-ЯёЁa-zA-Z]{2,20}$/,
+						message: "Неправильні сімволи"
+					}
+
+				})} />
 				<label htmlFor="surname">Фамілія</label>
-				<input type="text" name='surname' placeholder='введіть фамілію'/>
+				<div className={styles.error}>{errors?.surname && <p>{errors?.surname?.message}</p>}</div>
+				<input type="text" placeholder='введіть фамілію' {...register('surname', {
+					required: "Обов'язкове для заповнення",
+					minLength: {
+						value: 3,
+						message: 'Мінімум три символи'
+					},
+					pattern: {
+						value: /^[а-яА-ЯёЁa-zA-Z]{2,20}$/,
+						message: "Неправильні сімволи"
+					}
+				})}/>
 				<label htmlFor="email">Електронна адреса</label>
-				<input type="email" name='email' placeholder='введіть електронну адресу'/>
+				<div className={styles.error}>{errors?.email && <p>{errors?.email?.message}</p>}</div>
+				<input type="email" placeholder='введіть електронну адресу' {...register('email', {
+					required: "Обов'язкове для заповнення",
+					pattern: {
+						value: /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
+						message: "Невірний email"
+					}
+				})}/>
 				<label htmlFor="password">Пароль</label>
-				<input type="password" name='password' placeholder='введіть пароль'/>
-				<label htmlFor="confirmPassword" >Підтвердіть пароль</label>
-				<input type="password" name='confirmPassword' placeholder='підтвердіть пароль'/>
-				<div className={styles.formButton}><button>Зареєструватися</button></div>
+				<div className={styles.error}>{errors?.password && <p>{errors?.password?.message}</p>}</div>
+				<input type="password" placeholder='введіть пароль' {...register('password', {
+					required: "Обов'язкове для заповнення",
+					minLength: {
+						value: 8,
+						message: "Мінімум шість символів"
+					},
+					pattern: {
+						value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/,
+						message: "Нерпавильний пароль"
+					}
+				})}/>
+				<label htmlFor="confirmPassword">Підтвердіть пароль</label>
+				<div className={styles.error}>{errors?.confirmPassword && <p>{errors?.confirmPassword?.message}</p>}</div>
+				<input type="password" placeholder='підтвердіть пароль' {...register('confirmPassword', {
+					required: true,
+					validate: (val: string | number) => {
+						if (watch('password') != val) {
+							return 'Ваш пароль не співпадає'
+						}
+					}
+				})}/>
+				<div className={styles.formButton}>
+					<button type='submit'  disabled={!isValid}>Зареєструватися</button>
+				</div>
 
 			</form>
 			<Link to='/'> ← На головну</Link>

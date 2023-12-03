@@ -55,6 +55,9 @@
     color:white;
     cursor: pointer;
 }
+.form button a {
+    color: #FFFFFF;
+}
 
 .form label {
     font-size: 14px;
@@ -77,4 +80,8 @@ font-size: 12px;
 .form input:focus {
     outline: black;
     border: black 1px solid;
+}
+.error {
+    color: darkred;
+font-size: 12px;
 }

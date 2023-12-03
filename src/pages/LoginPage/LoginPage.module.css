@@ -97,3 +97,7 @@
     padding-left: 18px;
     font-size: 14px;
 }
+.error {
+    color: darkred;
+    font-size: 12px;
+}
