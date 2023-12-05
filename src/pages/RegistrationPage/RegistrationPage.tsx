@@ -76,7 +76,9 @@ const RegistrationPage = () => {
 					}
 				})}/>
 				<div className={styles.formButton}>
-					<button type='submit'  disabled={!isValid}>Зареєструватися</button>
+					<button type='submit'  disabled={!isValid}>Зареєструватися
+						{isValid ? <Link to={"/success"}></Link>: ''}
+					</button>
 				</div>
 
 			</form>
