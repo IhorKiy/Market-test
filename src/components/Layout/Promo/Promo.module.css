@@ -36,9 +36,11 @@
 }
 
 .contentWelcome {
-    width: 278.473px;
-    height: 30px;
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+color: #FFFFFF;
     border-radius: 50px;
     background: #5B5B5B;
 }

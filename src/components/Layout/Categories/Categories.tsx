@@ -1,22 +1,20 @@
 import Category from "./Category/Category.tsx";
 import styles from './Categories.module.css'
-const Categories = () => {
+import {CategoriesProps} from "./Categories.props.ts";
+import React from "react";
+
+const Categories = ({props}: CategoriesProps): React.JSX.Element => {
 	return (
 		<div className={styles.categoryBlock}>
 			<div className={styles.categoryTitleBlock}>
-				<div className={styles.categoryTitle}>Категорії</div>
-				<div className={styles.description1}></div>
-				<div className={styles.description2}></div>
+				<div className={styles.categoryTitle}>{props.categoriesBlock.title}</div>
+				<div className={styles.description}>{props.categoriesBlock.description}</div>
+
 			</div>
 			<div className={styles.categoryCard}>
-			<Category/>
-			<Category/>
-			<Category/>
-			<Category/>
-			<Category/>
-			<Category/>
-			<Category/>
-			<Category/>
+				{props.categoriesContent.map((props) => (
+					<Category title={props.title} icon={props.icon} slug={props.slug} subcategories={props.subcategories}/>
+				))}
 			</div>
 		</div>
 	)

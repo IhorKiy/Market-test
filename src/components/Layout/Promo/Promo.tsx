@@ -1,11 +1,11 @@
 import styles from "./Promo.module.css";
 
-const Promo = () => {
+const Promo = ({props}) => {
 	return (
 		<div className={styles.headerContent}>
 			<div className={styles.welcomeContainer}>
-				<div className={styles.welcome}>Ласкаво просимо</div>
-				<div className={styles.contentWelcome}></div>
+				<div className={styles.welcome}>{props.header.title}</div>
+				<div className={styles.contentWelcome}>{props.header.description}</div>
 			</div>
 			<div className={styles.contentContainer}>
 				<div className={styles.content1}></div>

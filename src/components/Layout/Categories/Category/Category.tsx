@@ -1,17 +1,30 @@
 import styles from './Category.module.css'
-const Category = () => {
+import React from "react";
+
+
+const Category = ({title, icon, slug, subcategories}: {
+	title: string,
+	icon: string,
+	slug: string,
+	subcategories: [string]
+}): React.JSX.Element => {
+	console.log(subcategories)
+
 	return (
 		<div className={styles.categoryCard}>
 			<div className={styles.categoryTitle}>
-				<div className={styles.categoryImage}></div>
-				<div className={styles.categoryName}>Назва категорії сервісу</div>
+				<div className={styles.categoryImage}><img src={icon} alt="icon"/></div>
+				<div className={styles.categoryName}>{title}</div>
+				{slug}
 			</div>
 			<div className={styles.subcategories}>
-				<div className={styles.subcategory}>Підкатегорії</div>
-				<div className={styles.subcategory}>Підкатегорії</div>
-				<div className={styles.subcategory}>Підкатегорії</div>
-				<div className={styles.subcategory}>Підкатегорії</div>
-				<div className={styles.subcategory}>Підкатегорії</div>
+				{subcategories.map((sub ) => (
+
+					<div className={styles.subcategory}>{sub.title}</div>
+
+
+				))}
+
 			</div>
 
 		</div>

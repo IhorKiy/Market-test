@@ -36,16 +36,18 @@
 }
 
 .description {
-    width: 325px;
-    height: 13px;
-    border-radius: 50px;
+
+font-size: 12px;
+    border-radius: 10px;
+    padding: 10px;
     background: #C8C8C8;
 }
 
 .descriptionBold {
     width: 500px;
-    height: 30px;
-    border-radius: 50px;
+
+    border-radius: 10px;
+    padding: 10px;
     background: #5B5B5B;
     color: #FFF;
     font-size: 12px;
@@ -55,7 +57,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 30px;
+
 }
 .button {
     width: 132px;

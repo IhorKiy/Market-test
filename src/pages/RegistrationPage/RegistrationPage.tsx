@@ -5,11 +5,12 @@ import {RegistrationForm} from "./RegistrationPageTypes.tsx";
 
 
 const RegistrationPage = () => {
+
 	const {register, watch, reset, handleSubmit, formState: {errors, isValid}} = useForm<RegistrationForm>({mode: "onChange"})
 	const submit: SubmitHandler<RegistrationForm> = () => {
 
 		reset()
-		window.location.href = '/success'
+
 
 	}
 
@@ -76,8 +77,9 @@ const RegistrationPage = () => {
 					}
 				})}/>
 				<div className={styles.formButton}>
-					<button type='submit'  disabled={!isValid}>Зареєструватися
-						{isValid ? <Link to={"/success"}></Link>: ''}
+					<button type='submit'  disabled={!isValid}>
+						Зареєструватися
+
 					</button>
 				</div>
 

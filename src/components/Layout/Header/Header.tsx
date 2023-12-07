@@ -1,16 +1,23 @@
 import styles from './Header.module.css'
 import {Link} from "react-router-dom";
+import {HeaderProps} from "./Header.props.ts";
+import React from "react";
 
-const Header = () => {
+
+
+const Header = ({props}:HeaderProps): React.JSX.Element => {
+
+
+
 	return (<div className={styles.headerBlock}>
 			<div className={styles.header}>
 				<div className={styles.linksBlock}>
-					<div className={styles.logo}>MARKETPLACE</div>
+					<div className={styles.logo}>{props.logo}</div>
 					<ul className={styles.links}>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
+						{props && props.links.map((link) => (
+							<li><a href={`${link.link}`}>{link.title}</a></li>
+						))}
+
 					</ul>
 				</div>
 				<div className={styles.headerButtons}>

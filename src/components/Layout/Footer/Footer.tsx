@@ -1,20 +1,22 @@
 import styles from './Footer.module.css'
 
 
-const Footer = () => {
+const Footer = ({props}) => {
 	return (
 		<div className={styles.footer}>
 			<div className={styles.contacts}>
 				<div className={styles.logo}>MARKETPLACE</div>
 				<div className={styles.informationBlock}>
-					<div className={styles.information}>Футер</div>
-					<div className={styles.information}></div>
+					<div className={styles.information}>{props.footer.description}</div>
+					<div className={styles.information}>{props.footer.description}</div>
 				</div>
 				<div>
 					<div className={styles.socialIcons}>
-						<div className={styles.icon}></div>
-						<div className={styles.icon}></div>
-						<div className={styles.icon}></div>
+						{props.socialMedia.map((el) => (
+							<div className={styles.icon}><span><a href={el.link}>{el.title}<img src={el.icon} alt="icon"/></a></span></div>
+						))}
+
+
 					</div>
 				</div>
 			</div>
