@@ -1,4 +1,4 @@
-import Category from "./Category/Category.tsx";
+import Category from "./Category/Category.jsx";
 import styles from './Categories.module.css'
 import {CategoriesProps} from "./Categories.props.ts";
 import React from "react";

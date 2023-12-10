@@ -2,12 +2,7 @@ import styles from './Category.module.css'
 import React from "react";
 
 
-const Category = ({title, icon, slug, subcategories}: {
-	title: string,
-	icon: string,
-	slug: string,
-	subcategories: [string]
-}): React.JSX.Element => {
+const Category = ({title, icon, slug, subcategories}) => {
 	console.log(subcategories)
 
 	return (
