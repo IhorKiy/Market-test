@@ -1,21 +1,17 @@
 import styles from './Header.module.css'
 import {Link} from "react-router-dom";
-import {HeaderProps} from "./Header.props.ts";
-import React from "react";
-
-
-
-const Header = ({props}:HeaderProps): React.JSX.Element => {
-
+import useFetchData, {Links} from "../../../stores/fetchData.tsx";
+const Header = ()=> {
+	const dataState = useFetchData(state => state.data)
 
 
 	return (<div className={styles.headerBlock}>
 			<div className={styles.header}>
 				<div className={styles.linksBlock}>
-					<div className={styles.logo}>{props.logo}</div>
+					<div className={styles.logo}>{dataState.logo}</div>
 					<ul className={styles.links}>
-						{props && props.links.map((link) => (
-							<li><a href={`${link.link}`}>{link.title}</a></li>
+						{dataState && dataState.links.map((link: Links, index:number) => (
+							<li key={index}><a href={`${link.link}`}>{link.title}</a></li>
 						))}
 
 					</ul>

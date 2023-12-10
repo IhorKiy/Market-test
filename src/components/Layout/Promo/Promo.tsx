@@ -1,11 +1,14 @@
 import styles from "./Promo.module.css";
+import useFetchData from "../../../stores/fetchData.tsx";
 
-const Promo = ({props}) => {
+
+const Promo = () => {
+	const dataState = useFetchData(state => state.data)
 	return (
 		<div className={styles.headerContent}>
 			<div className={styles.welcomeContainer}>
-				<div className={styles.welcome}>{props.header.title}</div>
-				<div className={styles.contentWelcome}>{props.header.description}</div>
+				<div className={styles.welcome}>{dataState.header.title}</div>
+				<div className={styles.contentWelcome}>{dataState.header.description}</div>
 			</div>
 			<div className={styles.contentContainer}>
 				<div className={styles.content1}></div>
@@ -25,5 +28,6 @@ const Promo = ({props}) => {
 			</form>
 		</div>
 	)
+
 }
 export default Promo

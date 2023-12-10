@@ -1,11 +1,13 @@
 import styles from './AboutUs.module.css'
+import useFetchData from "../../../stores/fetchData.tsx";
 
-const AboutUs = ({props}) => {
+const AboutUs = () => {
+	const dataState = useFetchData(state => state.data)
 	return (
 
 		<div className={styles.aboutUsBlock}>
-			{props.aboutUsBlock.map((el) => (
-				<div className={styles.block}>
+			{dataState.aboutUsBlock.map((el, index:number) => (
+				<div key={index} className={styles.block}>
 					<div className={styles.aboutUsImage}>
 						<img src={el.image} alt="icon"/>
 					</div>

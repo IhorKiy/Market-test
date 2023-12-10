@@ -1,9 +1,10 @@
 import styles from './Category.module.css'
-import React from "react";
+import {CategoriesContent} from "../../../../stores/fetchData.tsx";
 
 
-const Category = ({title, icon, slug, subcategories}) => {
-	console.log(subcategories)
+
+const Category = ({title, icon, slug, subcategories}:CategoriesContent) => {
+
 
 	return (
 		<div className={styles.categoryCard}>
@@ -13,9 +14,9 @@ const Category = ({title, icon, slug, subcategories}) => {
 				{slug}
 			</div>
 			<div className={styles.subcategories}>
-				{subcategories.map((sub ) => (
+				{subcategories.map((sub, index:number ) => (
 
-					<div className={styles.subcategory}>{sub.title}</div>
+					<div key={index} className={styles.subcategory}>{sub.title}</div>
 
 
 				))}
