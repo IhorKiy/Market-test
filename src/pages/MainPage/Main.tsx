@@ -1,11 +1,11 @@
 import Header from "../../components/Layout/Header/Header.tsx";
-import Promo from "../../components/Layout/Promo/Promo.tsx";
+import Promo from "../../components/Layout/Promo/Promo.jsx";
 import Recommendations from "../../components/Layout/Recomandations/Recommendations.tsx";
-import Categories from "../../components/Layout/Categories/Categories.tsx";
-import AboutUs from "../../components/Layout/AboutUs/AboutUs.tsx";
+import Categories from "../../components/Layout/Categories/Categories.jsx";
+import AboutUs from "../../components/Layout/AboutUs/AboutUs.jsx";
 import FAQ from "../../components/Layout/FAQ/FAQ.tsx";
 import SearchByCity from "../../components/Layout/SearchByCity/SearchByCity.tsx";
-import Footer from "../../components/Layout/Footer/Footer.tsx";
+import Footer from "../../components/Layout/Footer/Footer.jsx";
 import styles from './Main.module.css'
 import {useEffect, useState} from "react";
 import axios from "axios";

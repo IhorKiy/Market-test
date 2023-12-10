@@ -1,9 +1,8 @@
 import Category from "./Category/Category.jsx";
 import styles from './Categories.module.css'
-import {CategoriesProps} from "./Categories.props.ts";
 import React from "react";
 
-const Categories = ({props}: CategoriesProps): React.JSX.Element => {
+const Categories = ({props}) => {
 	return (
 		<div className={styles.categoryBlock}>
 			<div className={styles.categoryTitleBlock}>
