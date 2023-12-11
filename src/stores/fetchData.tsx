@@ -4,6 +4,7 @@ import {persist} from "zustand/middleware";
 
 export interface Root {
 	data: Data
+	fetchData: () => Promise<Data>
 }
 
 export interface Data {
@@ -61,14 +62,23 @@ export interface SocialMedia {
 }
 
 
+const useFetchData = create<Root>()(persist((set): Root => ({
+		data: {
+			logo: '',
+			links: [],
+			header: [],
+			categoriesBlock: [],
+			categoriesContent: [],
+			aboutUsBlock: [],
+			footer: [],
+			socialMedia: []
 
-
-const useFetchData = create(persist((set) => ({
-		data: {},
-		fetchData: async ():Promise<void> => {
+		},
+		fetchData: async (): Promise<Data> => {
 			const url = 'http://3.68.186.228:86/api/v1/homepage'
 			const response = await axios.get(url)
 			set({data: await response.data.data})
+			return response.data.data
 		},
 
 
