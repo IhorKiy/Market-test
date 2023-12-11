@@ -5,7 +5,13 @@
     justify-content: space-between;
     background-color: white;
     height: 86px;
-    width: 1440px
+
+    @media screen and (min-width: 1366px) {
+        width: 1366px;
+        margin-left: 10px;
+        margin-right: 10px;}
+    
+    
 }
 
 .linksBlock {
@@ -31,7 +37,7 @@
     list-style: none;
     color: #FFF;
     font-family: Inter;
-    font-size: 12px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
