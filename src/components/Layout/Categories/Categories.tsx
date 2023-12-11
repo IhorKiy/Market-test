@@ -13,8 +13,9 @@ const Categories = () => {
 
 			</div>
 			<div className={styles.categoryCard}>
-				{dataState.categoriesContent.map((props:CategoriesContent, index:number) => (
-					<Category key={index} title={props.title} icon={props.icon} slug={props.slug} subcategories={props.subcategories}/>
+				{dataState.categoriesContent.map((props: CategoriesContent, index: number) => (
+					<Category key={index} title={props.title} icon={props.icon} slug={props.slug}
+							  subcategories={props.subcategories}/>
 				))}
 			</div>
 		</div>

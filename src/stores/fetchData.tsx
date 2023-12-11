@@ -10,11 +10,11 @@ export interface Root {
 export interface Data {
 	logo: string
 	links: Links[]
-	header: Header[]
-	categoriesBlock: CategoriesBlock[]
+	header: Header
+	categoriesBlock: CategoriesBlock
 	categoriesContent: CategoriesContent[]
 	aboutUsBlock: AboutUsBlock[]
-	footer: Footer[]
+	footer: Footer
 	socialMedia: SocialMedia[]
 }
 
@@ -66,11 +66,12 @@ const useFetchData = create<Root>()(persist((set): Root => ({
 		data: {
 			logo: '',
 			links: [],
-			header: [],
-			categoriesBlock: [],
+			header: {description:'',
+			title:''},
+			categoriesBlock: {title:'',description:''},
 			categoriesContent: [],
 			aboutUsBlock: [],
-			footer: [],
+			footer: {description:''},
 			socialMedia: []
 
 		},
