@@ -1,0 +1,24 @@
+.recommendations {
+    width: 1245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 90px;
+}
+.recommendationsTitle {
+    width: 278.473px;
+    height: 30px;
+    border-radius: 50px;
+    background: #5B5B5B;
+    color: #E8E8E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+
+}
+.cards {
+    display: flex;
+    gap: 30px;
+}

@@ -1,0 +1,115 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 86px;
+
+    @media screen and (min-width: 1366px) {
+        width: 1366px;
+        margin-left: 10px;
+        margin-right: 10px;}
+    
+    
+}
+
+.linksBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.logo {
+    color: #5B5B5B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.links li {
+    background-color: #5B5B5B;
+    padding: 1px 30px;
+    border-radius: 20px;
+    color: #E8E8E8;
+    cursor: pointer;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #E8E8E8;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 20px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.loginButton {
+    background-color: #5B5B5B;
+    padding: 6px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #E8E8E8;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.buttonBusiness {
+    width: 132px;
+    height: 40px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.buttonBusiness img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonText {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 35%
+}
+
+
